@@ -21,7 +21,7 @@ services:
       - mongodb_data:/data/db
     environment:
       - MONGO_INITDB_ROOT_USERNAME=vmix-woolf
-      - MONGO_INITDB_ROOT_PASSWORD=aJLoL1ehSf4qHO0a
+      - MONGO_INITDB_ROOT_PASSWORD=xxxxxxxxxxxx
       - MONGO_INITDB_DATABASE=animals
     networks:
       - mongodb_network
