@@ -1,10 +1,9 @@
 from pymongo import MongoClient
 from pymongo.errors import ConnectionFailure
+from credentials import username, password
 
 host = 'localhost'
 port = 27017
-username = 'vmix-woolf'
-password = 'aJLoL1ehSf4qHO0a'
 auth_db = 'admin'
 
 def get_db():
