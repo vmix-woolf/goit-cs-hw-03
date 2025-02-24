@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: viacheslav
+      POSTGRES_PASSWORD: ghj123YUI
+      POSTGRES_DB: task_manager
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongo_db
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=vmix-woolf
+      - MONGO_INITDB_ROOT_PASSWORD=aJLoL1ehSf4qHO0a
+      - MONGO_INITDB_DATABASE=animals
+    networks:
+      - mongodb_network
+
+volumes:
+  pgdata:
+  mongodb_data:
+
+networks:
+  mongodb_network:
+    driver: bridge
